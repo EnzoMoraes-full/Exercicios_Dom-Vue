@@ -1,0 +1,180 @@
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/vue@2"></script>
+
+<div id="desafio">
+    <!-- 1) Preencha a tag <p> abaixo com o seu Nome e Idade - usando Interpolação -->
+        <h1>Exercicio 1</h1><p>
+             <div>
+            {{ message }}
+            Meu nome é: {{ nome }}
+            <input type="text" v-model="nome"/>
+        </div>
+            <br>
+            <div>
+                {{ message }}
+                Minha idade é: {{ idade }}
+                <input type="number" v-model="idade"/>
+            </div>
+            
+        
+        
+            <br>
+
+    <hr>
+    <hr>
+    <br>
+    <!-- 2) Exiba sua idade multiplicada por 3 -->
+
+        <h1>Exercicio 2</h1>
+
+       <p>Minha idade é: 18 anos</p>
+       <h3>Minha idade multiplicada por 3 é:
+       {{idademultiplicado}}
+    </h3>
+<br>
+    <hr>
+    <hr>
+    <br>
+    <!-- 3) Chame uma função para exibir um número randomico
+        entre 0 and 1 (Math.random()) -->
+    <h1>Exercicio 3</h1>
+    
+    {{ nm }}
+    <button @click="nmrom">Aleatório</button>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <!-- 4) Procure uma imagem no google e exiba na tag img 
+        fazendo o binding no atributo "src" -->
+        <h1>Exercicio 4</h1>
+
+    <div>
+        <img :src="nmIMG" height="400">
+    </div>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <!-- 5) Inicialize o input com o seu nome (use o atributo "value") -->
+    <h1>Exercicio 5</h1>
+    <div>
+        <input type="text" :value="nome">
+    </div>
+<br>
+<hr>
+<hr>
+<br>
+    <!-- 6) Exiba um alert quando o botão for clicado -->
+    <h1>Exercicio 6</h1>
+    <div>
+        <button @click="alert()">Exibir Alerta</button>
+    </div>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    
+    <!-- 7) Escute o evento "keydown" e armazene o valor na propriedade
+        data (dica: event.target.value) -->
+
+        <h1>Exercicio 7</h1>
+    <div>
+        <input type="text" v-on:keydown = "armazena"  placeholder="   Entre com keydowns" >
+        <p>{{ value }}</p>
+       
+    </div>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    
+    
+    <!-- 8) Ajuste o exercício 7 para disparar o evento "keydown" somente
+        quando a tecla for ENTER -->
+        <h1>Exercicio 8</h1>
+    <div>
+        <input type="text" v-model="inputValue" @keydown.enter="dispararEnter" placeholder="   Entre com keydowns" />
+       <p> <input type="text" :value="enteramostral"></p>
+    </div>
+    <br>
+    <hr>
+    <hr>
+    <br>
+
+    <!-- 9) Exibir em "resultado" o texto 'Valor Diferente' enquanto
+        "valor" for diferente de 37 - "valor" é alterado pelos botões.
+        Mostrar 'Valor Igual' quando "valor" for igual a 37 -->
+
+        <h1>Exercicio 9</h1>
+        {{resultadoo}}
+       <p> <input type="text" v-model="valorr" placeholder="   Entre com um valor"></p>
+        <button  @click="alterarTexto()">Confirir valor</button>
+        <br>
+        <hr>
+        <hr>
+        <br>
+        
+    <!-- 10) Monitorar as mudança de "resultado" e reiniciar "valor"
+        para 0 depois de 5 segundos (dica: setTimeout(..., 5000) -->    
+        <h1>Exercicio 10</h1>        
+    <div>
+        <p>Contagem: {{ valorContagem }}</p>
+        <button @click="resultado += 5">Somar 5</button>
+        <button @click="resultado += 1">Somar 1</button>
+        <p><input type="text" v-model="resultado"></p>
+        <button  @click="ValorContagem()" name="bu">Iniciar calculo</button>
+    </div>
+	<br>
+    <hr>
+    <hr>
+    <br>
+	<!-- 11) Crie duas classes CSS e associe a div usando a
+		sintaxe de array -->
+        <h1>Exercicio 11</h1> 
+        
+            <div class="caixas">
+                <div
+                class="box"
+                :style="{backgroundColor: corEscolhida}"
+            >
+            Insira sua cor favorita:   <input type="text" v-model="corEscolhida">
+            </div>
+            
+                <div :class="['box', classeCSS]"> Selecione uma das cores: 
+                     <select v-model="classeCSS">
+                    <option value="c1">Vermelho</option>
+                    <option value="cor-2">Amarelo</option>
+                    <option value="c3">Verde</option>
+                </select> </div>
+                
+            </div>      
+    <br>
+    <hr>
+    <hr>
+    <br>
+
+	<!-- 12) Aplique na div abaixo a classe informada pelo usuário
+		(crie classe CSS de exemplo). -->
+        <h1>Exercicio 12</h1> 
+
+		<p><input type="text" class="in" :value="nome" :class="[classeEstilos]" :styles="{backgroundColor: estiloSelecionado}"></p>
+        
+		 Selecione seu estilo:
+          <select v-model="classeEstilos">
+            <option value="ep">Praiano</option>
+            <option value="ec">Cachorro doido</option>
+            <option value="en">Ninja</option>
+        </select> 
+	</div>
+    
+<br>
+<br>
+<hr>
+<hr>
+
+<h1>Fim</h1>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="app.js"></script>

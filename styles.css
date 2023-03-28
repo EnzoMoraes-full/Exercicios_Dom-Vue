@@ -1,0 +1,44 @@
+body{
+    text-align: center;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(249, 228, 228);
+}
+
+.grid{
+    display: grid;
+    grid-auto-rows: 40px;
+}
+
+.caixas {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: gray;
+}
+
+.c1 { background-color: red; }
+.cor-2 { background-color: yellow; }
+.c3 { background-color: green; }
+
+
+.ep { background-color: cornflowerblue;
+font-family: 'Times New Roman', Times, serif;
+width: 400px;
+color: #e10303;}
+
+.ec { background-color: rgb(97, 87, 87);
+font-family: Georgia, 'Times New Roman', Times, serif;
+width: 300px;
+color: aqua;}
+
+.en { background-color: darkslategrey;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+width: 200px;
+color: deeppink;}
